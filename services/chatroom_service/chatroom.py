@@ -215,4 +215,5 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all() 
         print("Database Tables created for Chatroom Service!")
-    app.run(port=5002,debug=True)
+    # error when running on port 5002, changed to 5001
+    app.run(host="0.0.0.0", port=5002, debug=True)

@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  profile-app-server:
+    restart: always
+    image: cpriest7/profile-server-ece4150:latest
+    container_name: profile-server
+    ports:
+     - "5001:5001"
+    volumes:
+      - ~/data:/app/data
+  chatroom-app-server:
+    restart: always
+    image: cpriest7/chatroom-server-ece4150:latest
+    container_name: chatroom-server
+    ports:
+      - "5002:5002"
+    volumes:
+      - ~/data:/app/data
